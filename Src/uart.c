@@ -83,7 +83,7 @@ void sendChar(char c){
 	while(!READ_BIT(USART1->SR , USART_SR_TC));
 }
 
-uint16_t UART_read(){
+uint16_t dev_read(){
 
 	while(!READ_BIT(USART1->SR, USART_SR_RXNE));
 	uint16_t c = READ_REG(USART1->DR);
@@ -94,7 +94,7 @@ uint16_t UART_read(){
 
 }
 
-void UART_write(const char *str){
+void dev_write(const char *str){
 	if(*str == '\0'){
 		return;
 	}

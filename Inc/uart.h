@@ -8,9 +8,9 @@
 #include "system_stm32f4xx.h"
 
 
-void UART_write(const char *str);
-uint16_t UART_read();
-void sendChar(char c);
+void dev_write(const char *str);
+uint16_t dev_read();
+//void sendChar(char c);
 void init_UART();
 
 #endif /* UART_H_ */
